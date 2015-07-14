@@ -1,40 +1,27 @@
 {
-    "update_url": "https://clients2.google.com/service/update2/crx",
-    "name": "FPL Mini-League Stats Calculator",
-    "short_name": "FPL Stats",
-    "version": "0.1.5",
-    "description": "Calculates insightful statistics for your Fantasy Premier League mini-leagues with the click of a mouse!",
+  "name": "FPL Mini-League Stats Calculator",
+  "short_name": "FPL Stats",
+  "version": "0.1.5",
+  "description": "Calculates insightful statistics for your Fantasy Premier League mini-leagues with the click of a mouse!",
     "background": {
-        "scripts": [
-            "background.js"
-        ]
-    },
-    "manifest_version": 2,
-    "page_action": {
-        "default_icon": "BarChart.png",
-        "default_title": "Get league stats!"
-    },
+	  "scripts": ["background.js"]
+  },
+  "manifest_version": 2,
+  "page_action": {
+    "default_icon": "BarChart.png",
+	"default_title" : "Get league stats!"
+  },
     "permissions": [
-        "tabs",
-        "http://fantasy.premierleague.com/*",
-        "https://fantasy.premierleague.com/*"
-    ],
-    "icons": {
-        "128": "BarChart.png"
-    },
-    "content_scripts": [
-        {
-            "js": [
-                "jquery-2.0.2.min.js",
-                "contentTest.js"
-            ],
-            "css": [
-                "myStyles.css"
-            ],
-            "matches": [
-                "http://fantasy.premierleague.com/*",
-                "https://fantasy.premierleague.com/*"
-            ]
-        }
-    ]
+	"tabs",
+	"http://fantasy.premierleague.com/*",
+	"https://fantasy.premierleague.com/*"
+  ],
+  "icons" : {
+    "128" : "BarChart.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery-2.0.2.min.js", "contentTest.js" ],
+    "css": ["myStyles.css"],
+    "matches": [ "http://fantasy.premierleague.com/*", "https://fantasy.premierleague.com/*"]
+  }]
 }

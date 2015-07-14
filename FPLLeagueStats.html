@@ -1,210 +1,143 @@
 <!DOCTYPE html>
 <html>
- 
-<head>
-    <title>FPL League Stats</title>
-    <script src="jquery-2.0.2.min.js" type="text/javascript"></script>
-    <link href="myStyles.css" rel="stylesheet">
-    <script src="contentTest.js" type="text/javascript"></script>
-</head>
- 
-<body>
- 
-    <div id="tabs">
-        <div id="loading">
-            <img id="loadingIcon" alt="Loading!" src="loadingstatsicon.gif" />
-            <h3 class="loadingText">The FPL Stats Man is calculating your stats!</h3>
-        </div>
-        <div id="tabs-1">
-            <table id="overalltable">
-                <table id="titletable" border="1">
-                    <tr>
-                        <td>
-                            <h2 id="titletext"><div id="leagueTitle"></div></h2>
-                        </td>
-                    </tr>
-                </table>
-                <table id="mytable1" border="1">
-                    <tr>
-                        <td>Teams Counted:</td>
-                        <td>
-                            <div id="output14"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Gameweek:</td>
-                        <td>
-                            <div id="gameweek"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>League Standard:</td>
-                        <td>
-                            <div id="leagueStandard"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>League Average This Gameweek:</td>
-                        <td>
-                            <div id="output1"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Teams still in cup:</td>
-                        <td>
-                            <div id="incup"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Average Players Played Per Team:</td>
-                        <td>
-                            <div id="playersplayed"></div>
-                        </td>
-                    </tr>
-                </table>
-                <table id="mytable2" border="1">
-                    <tr>
-                        <th>Transfer Data This Gameweek:</th>
-                    </tr>
-                    <tr>
-                        <td>Average Team Value:</td>
-                        <td>
-                            <div id="averageteamvalue"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Average Bank Value:</td>
-                        <td>
-                            <div id="averagebankvalue"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Teams with wildcard available:</td>
-                        <td>
-                            <div id="wildcard"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Average transfers per person:</td>
-                        <td>
-                            <div id="output"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Average point hits per person:</td>
-                        <td>
-                            <div id="output0"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Zero Transfers:</td>
-                        <td>
-                            <div id="output2"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>One Transfer:</td>
-                        <td>
-                            <div id="output3"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Two Transfers:</td>
-                        <td>
-                            <div id="output4"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Three Transfers:</td>
-                        <td>
-                            <div id="output5"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Four Or More Transfers:</td>
-                        <td>
-                            <div id="output6"></div>
-                        </td>
-                    </tr>
-                </table>
-                <table id="mytable3" border="1">
-                    <tr>
-                        <th>Captain Duties This Gameweek:</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output7"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output8"></div>
-                        </td>
-                    </tr>
-                </table>
-                <table id="mytable4" border="1">
-                    <tr>
-                        <th>Team Selections This Gameweek:</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output9"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output10"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output11"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output12"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output13"></div>
-                        </td>
-                    </tr>
-                </table>
-                <table id="mytable4" border="1">
-                    <tr>
-                        <th>Transferred Players This Gameweek:</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output20"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="output21"></div>
-                        </td>
-                    </tr>
-                </table>
-                </br>
-            </table>
-            <h3 id="text" align="middle">Please consider making a small donation to fund future updates and even more FPL projects.</h3>
-            <form align="middle" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_donations">
-                <input type="hidden" name="business" value="jackendacollins@gmail.com">
-                <input type="hidden" name="lc" value="IE">
-                <input type="hidden" name="item_name" value="FPLStatsMan">
-                <input type="hidden" name="no_note" value="0">
-                <input type="hidden" name="currency_code" value="EUR">
-                <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-                <input type="image" src="paypaldonation.png" border="0" width="300" height="170" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
- 
-            </form>
-            <h3 id="text" align="middle">Email: FPLStatsMan@gmail.com.</h3>
-            </br>
-        </div>
-</body>
- 
+	<head>
+		<title>FPL League Stats</title>
+		<script src="scripts/jquery-2.0.2.min.js" type ="text/javascript"></script>
+        <link href="myStyles.css" rel="stylesheet">
+        <script src="scripts/contentTest.js" type ="text/javascript"></script>
+	</head>
+	<body>
+
+	<div id="tabs">
+		<div id="loading">
+			<img id="loadingIcon" alt="Loading!" src="images/loadingstatsicon.gif"/>
+			<h3 class="loadingText">The FPL Stats Man is calculating your stats!</h3>
+		</div>
+		<div id="tabs-1">
+			<table id="overalltable">
+			<table id="titletable" border="1">
+				<tr>
+					<td><h2 id="titletext"><div id="leagueTitle"></div></h2></td>
+				</tr>
+			</table>
+			<table id="mytable1" border="1">
+				<tr>
+					<td>Teams Counted:</td>
+					<td><div id="output14"></div></td>
+				</tr>
+				<tr>
+					<td>Gameweek:</td>
+					<td><div id="gameweek"></div></td>
+				</tr>
+				<tr>
+					<td>League Standard:</td>
+					<td><div id="leagueStandard"></div></td>
+				</tr>
+				<tr>
+					<td>League Average This Gameweek:</td>
+					<td><div id="output1"></div></td>
+				</tr>
+				<tr>
+					<td>Teams still in cup:</td>
+					<td><div id="incup"></div></td>
+				</tr>
+				<tr>
+					<td>Average Players Played Per Team:</td>
+					<td><div id="playersplayed"></div></td>
+				</tr>
+			</table>
+			<table id="mytable2" border="1">
+				<tr>
+					<th>Transfer Data This Gameweek:</th>
+				</tr>
+				<tr>
+					<td>Average Team Value:</td>
+					<td><div id="averageteamvalue"></div></td>
+				</tr>
+				<tr>
+					<td>Average Bank Value:</td>
+					<td><div id="averagebankvalue"></div></td>
+				</tr>
+				<tr>
+					<td>Teams with wildcard available:</td>
+					<td><div id="wildcard"></div></td>
+				</tr>
+				<tr>
+					<td>Average transfers per person:</td>
+					<td><div id="output"></div></td>
+				</tr>
+				<tr>
+					<td>Average point hits per person:</td>
+					<td><div id="output0"></div></td>
+				</tr>
+				<tr>
+					<td>Zero Transfers:</td>
+					<td><div id="output2"></div></td>
+				</tr>
+				<tr>
+					<td>One Transfer:</td>
+					<td><div id="output3"></div></td>
+				</tr>
+				<tr>
+					<td>Two Transfers:</td>
+					<td><div id="output4"></div></td>
+				</tr>
+				<tr>
+					<td>Three Transfers:</td>
+					<td><div id="output5"></div></td>
+				</tr>
+				<tr>
+					<td>Four Or More Transfers:</td>
+					<td><div id="output6"></div></td>
+				</tr>
+			</table>
+			<table id="mytable3" border="1">
+				<tr>
+					<th>Captain Duties This Gameweek:</th>
+				</tr>
+				<tr>
+					<td><div id="output7"></div></td>
+				</tr>
+				<tr>
+					<td><div id="output8"></div></td>
+				</tr>
+			</table>
+			<table id="mytable4" border="1">
+				<tr>
+					<th>Team Selections This Gameweek:</th>
+				</tr>
+				<tr>
+					<td><div id="output9"></div></td>
+				</tr>
+				<tr>
+					<td><div id="output10"></div></td>
+				</tr>
+				<tr>
+					<td><div id="output11"></div></td>
+				</tr>
+				<tr>
+					<td><div id="output12"></div></td>
+				</tr>
+				<tr>
+					<td><div id="output13"></div></td>
+				</tr>
+			</table>
+			<table id="mytable4" border="1">
+				<tr>
+					<th>Transferred Players This Gameweek:</th>
+				</tr>
+				<tr>
+					<td><div id="output20"></div></td>
+				</tr>
+				<tr>
+					<td><div id="output21"></div></td>
+				</tr>
+			</table>
+			</br>
+			</table>
+			<a href="https://github.com/Jack-Collins/FPL">Can you write code? Help make the calculator better by contributing to our GitHub!</a>
+						<h3 id="text" align="middle">Email: FPLStatsMan@gmail.com.</h3>
+			</br>
+		</div>
+	</body>
 </html>
