@@ -11,7 +11,7 @@ Possible areas users might like to contribute to:
 
 - Add new features: Anything that is useful to an FPL manager is up for consideration. Grahps, visuals etc. would be where I would like to see the extension go next but that is just an idea.
 
-Contac
+Contact FPLStatsMan@gmail.com
 
 
 
