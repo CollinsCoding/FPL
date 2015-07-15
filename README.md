@@ -9,7 +9,7 @@ Possible areas users might like to contribute to:
 
 - Improve code: I am a novice coder and am certain my work could be improved by more experienced developers.
 
-- Add new features: Anything that is useful to an FPL manager is up for consideration. Grahps, visuals etc. would be where I would like to see the extension go next but that is just an idea.
+- Add new features: Anything that is useful to an FPL manager is up for consideration. Graphs, visuals etc. would be where I would like to see the extension go next but that is just an idea.
 
 Contact FPLStatsMan@gmail.com
 
