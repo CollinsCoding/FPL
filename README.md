@@ -1,4 +1,5 @@
-# FPL
+# Chrome extension for use with the official Fantasy Premier League site.
+
 FPLStatsMan mini-league stats calculator: https://chrome.google.com/webstore/detail/fpl-mini-league-stats-cal/ofjikfigpedfahjpninpbegobibogbda?hl=en
 
 With less spare time, I have found it difficult to devote work to this extension and so I have decided to allow others contribute in the hope that the extension may continue to develop.
