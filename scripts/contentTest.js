@@ -1,3 +1,4 @@
+//variables
 var totalTransfersMade = 0;
 var zeroTransfers = 0;
 var oneTransfers = 0;
