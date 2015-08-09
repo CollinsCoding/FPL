@@ -1,14 +1,14 @@
 {
   "name": "FPL Mini-League Stats Calculator",
   "short_name": "FPL Stats",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Calculates insightful statistics for your Fantasy Premier League mini-leagues with the click of a mouse!",
     "background": {
-	  "scripts": ["background.js"]
+	  "scripts": ["scripts/background.js"]
   },
   "manifest_version": 2,
   "page_action": {
-    "default_icon": "BarChart.png",
+    "default_icon": "images/BarChart.png",
 	"default_title" : "Get league stats!"
   },
     "permissions": [
@@ -17,10 +17,10 @@
 	"https://fantasy.premierleague.com/*"
   ],
   "icons" : {
-    "128" : "BarChart.png"
+    "128" : "images/BarChart.png"
   },
   "content_scripts": [ {
-    "js": [ "jquery-2.0.2.min.js", "contentTest.js" ],
+    "js": [ "scripts/jquery-2.0.2.min.js", "scripts/contentTest.js" ],
     "css": ["myStyles.css"],
     "matches": [ "http://fantasy.premierleague.com/*", "https://fantasy.premierleague.com/*"]
   }]

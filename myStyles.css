@@ -1,0 +1,200 @@
+﻿#text{
+	font-family:Comic sans ms;
+}
+#top1000{
+	    border:5px solid #DFDFDC
+}
+#loading
+{
+    position:absolute;  
+    left: 26.5%;
+    top: 125px;
+    width:47%;
+    background-color:#E8E8E8;
+    z-index: 999;
+    display:block;
+    margin: 0 auto;
+    border:2px solid black;
+}
+h2.titletext{
+	font-family: Comic sans ms;
+}
+h3.loadingText{
+    text-align:center;
+	font-family: Comic sans ms;
+    font-size:1.5em;
+}
+ 
+#loadingIcon
+{
+    margin-top:10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body
+{
+background-color: white;
+}
+
+#twitter
+{
+		width: 300px;
+		height: 160px;
+        margin-left: 35%;
+		margin-right: auto;
+        background: #CEDFF5;
+		
+}
+
+#titletable
+{
+		width: 1000px;
+        margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+        background: #F2F4F4;
+        border-radius: 5px;
+		font-size: .8em;
+
+}
+#tabs-1
+{
+		width: 1000px;
+        margin-left: auto;
+		margin-right: auto;
+        background: #CEDFF5;
+        border-radius: 5px;
+		border-color: grey;
+		border-style: solid;
+}
+#mytable1
+{
+        width: 600px;
+        margin-left: auto;
+		margin-right: auto;
+        background: #CEDFF5;
+        border-style: solid;
+        border-color: #000000;
+        border-radius: 5px;
+       
+}
+ 
+#mytable2
+{
+        width: 600px;
+        margin-left: auto;
+		margin-right: auto;
+        background: #CEDFF5;
+        border-radius: 5px;
+       
+}
+ 
+#mytable3
+{
+        width: 1000px;
+        margin-left: auto;
+		margin-right: auto;
+        background: #CEDFF5;
+        border-radius: 5px;
+       
+}
+ 
+#mytable4
+{
+        width: 1000px;
+        margin-left: auto;
+		margin-right: auto;
+        background: #CEDFF5;
+        border-radius: 5px;
+       
+}
+#leagueStandard{
+		background: #F2F4F4;
+}
+#averageteamvalue{
+		background: #F2F4F4;
+}
+#wildcard{
+		background: #F2F4F4;
+}
+#playersplayed{
+		background: #F2F4F4;
+}
+#averagebankvalue{
+		background: #F2F4F4;	
+}
+ #output0{
+		background: #F2F4F4;
+ }
+#incup{
+		background: #F2F4F4;
+
+}
+  #output{
+		background: #F2F4F4;
+ }
+ #output1{
+		background: #F2F4F4;
+ }
+  #output2{
+		background: #F2F4F4;
+ }
+
+  #output3{
+		background: #F2F4F4;
+ }
+
+  #output4{
+		background: #F2F4F4;
+ }
+
+  #output5{
+		background: #F2F4F4;
+ }
+ #output6{
+		background: #F2F4F4;
+ }
+
+  #output7{
+		background: #F2F4F4;
+ }
+
+  #output8{
+		background: #F2F4F4;
+ }
+
+  #output9{
+		background: #F2F4F4;
+ }
+
+  #output10{
+		background: #F2F4F4;
+ }
+
+  #output11{
+		background: #F2F4F4;
+ }
+ #output12{
+		background: #F2F4F4;
+ }
+ #output13{
+		background: #F2F4F4;
+ }
+ #output14{
+		background: #F2F4F4;
+ }
+ #output20{
+		background: #F2F4F4;
+ }
+ #output21{
+		background: #F2F4F4;
+ }
+ #leaguetitle{
+		background: #F2F4F4;
+ }
+ #gameweek{
+		background: #F2F4F4;
+ }
+
