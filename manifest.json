@@ -20,7 +20,7 @@
     "128" : "images/BarChart.png"
   },
   "content_scripts": [ {
-    "js": [ "scripts/jquery-2.0.2.min.js", "scripts/contentTest.js" ],
+    "js": [ "scripts/jquery.flot.js", "scripts/jquery.flot.pie.js", "scripts/jquery-2.0.2.min.js", "scripts/contentTest.js"],
     "css": ["myStyles.css"],
     "matches": [ "http://fantasy.premierleague.com/*", "https://fantasy.premierleague.com/*"]
   }]

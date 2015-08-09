@@ -27,8 +27,6 @@ var wildcardAvailable = 0;
 var inCup = 0;
 
 
-
-
 function getTeamValue(inSource, links){
 if ((/Team value/g).test(inSource) != false){
 var teamValueCode = $(inSource).find(".ismRHSFinanceList dd").html();
@@ -140,6 +138,18 @@ threeTransfers += 1;
 if (inTransfers > 3){
 fourOrMoreTransfers += 1;
 };
+ 
+ var transfersPerManager = {
+	zero: zeroTransfers,
+	one: oneTransfers,
+	two: twoTransfers,
+	three: threeTransfers,
+	fourPlus: fourOrMoreTransfers
+}
+
+pieChartThis(transfersPerManager);
+
+
 $('div#output2').text((zeroTransfers*100/links.length).toFixed(2) + "%");
 $('div#output3').text((oneTransfers*100/links.length).toFixed(2) + "%");
 $('div#output4').text((twoTransfers*100/links.length).toFixed(2) + "%");
@@ -327,3 +337,78 @@ document.addEventListener('DOMContentLoaded', function () {
         getWebsite(response);
     });
 });
+
+
+//a function which presents the values of an enumerator in a piechart form.
+function pieChartThis(enumerator){
+$(function() {
+		// Example Data
+		var data = [
+		{ label: "0",  data: enumerator.zero},
+		{ label: "1",  data: enumerator.one},
+		{ label: "2",  data: enumerator.two},
+		{label: "3", data: enumerator.three}, {label: "4+", data: enumerator.fourPlus}];
+
+		var placeholder = $("#placeholder");
+			
+		$("#example-5").click(function() {
+			placeholder.unbind();
+			$("#title").text("Label Styles #1");
+			$("#description").text("Semi-transparent, black-colored label background.");
+			$.plot(placeholder, data, {
+				series: {
+					pie: { 
+						show: true,
+						radius: 1,
+						label: {
+							show: true,
+							radius: 3/4,
+							formatter: labelFormatter,
+							background: { 
+								opacity: 0.5,
+								color: "#000"
+							}
+						}
+					}
+				},
+				legend: {
+					show: false
+				}
+			});
+			setCode([
+				"$.plot('#placeholder', data, {",
+				"    series: {",
+				"        pie: { ",
+				"            show: true,",
+				"            radius: 1,",
+				"            label: {",
+				"                show: true,",
+				"                radius: 3/4,",
+				"                formatter: labelFormatter,",
+				"                background: { ",
+				"                    opacity: 0.5,",
+				"                    color: '#000'",
+				"                }",
+				"            }",
+				"        }",
+				"    },",
+				"    legend: {",
+				"        show: false",
+				"    }",
+				"});"
+			]);
+		});
+	
+		// Show the initial default chart
+		$("#example-5").click();
+	});
+	// A custom label formatter used by several of the plots
+	function labelFormatter(label, series) {
+		return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+	}
+	//
+	function setCode(lines) {
+		$("#code").text(lines.join("\n"));
+	}
+	
+}
